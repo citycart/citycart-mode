@@ -1,25 +1,16 @@
 package com.citycart.model;
 
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
-import org.springframework.data.mongodb.core.mapping.Document;
-
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
  * Created by otm on 29/10/16.
  */
-@Document(collection = "RETAILERS")
 public class Retailer implements Serializable {
 
-    @Id
     private String id;
-    @Indexed(unique = true)
     private String name;
     private Address address;
-    @CreatedDate
     private LocalDateTime creationDate;
 
     public Retailer() {

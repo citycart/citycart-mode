@@ -9,17 +9,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <properties>
-    <spring-data-mongodb.version>1.9.3.RELEASE</spring-data-mongodb.version>
-  </properties>
 
 
-  <dependencies>
-    <dependency>
-      <groupId>org.springframework.data</groupId>
-      <artifactId>spring-data-mongodb</artifactId>
-      <version>${spring-data-mongodb.version}</version>
-    </dependency>
-  </dependencies>
 
 </project>

@@ -1,7 +1,5 @@
 package com.citycart.model;
 
-import org.springframework.data.mongodb.core.index.Indexed;
-
 import java.io.Serializable;
 import java.time.LocalDate;
 
@@ -11,12 +9,9 @@ import java.time.LocalDate;
 public class Person implements Serializable {
 
     private String firstName;
-    @Indexed
     private String lastName;
     private LocalDate birthDate;
-    @Indexed
     private String phoneNumber;
-    @Indexed
     private String email;
     private Address address;
 

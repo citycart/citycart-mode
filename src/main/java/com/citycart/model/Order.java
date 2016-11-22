@@ -1,11 +1,5 @@
 package com.citycart.model;
 
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
-import org.springframework.data.mongodb.core.mapping.DBRef;
-import org.springframework.data.mongodb.core.mapping.Document;
-
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Set;
@@ -13,25 +7,16 @@ import java.util.Set;
 /**
  * Created by otm on 22/10/16.
  */
-@Document(collection = "ORDERS")
 public class Order implements Serializable {
-    @Id
     private String id;
-    @Indexed(unique = true)
     private String orderNumber;
-    @CreatedDate
     private LocalDateTime creationDate;
     private Address withdrawAddress;
     private Address deliveryAddress;
     private Integer packsCount;
-    @Indexed
     private OrderStatus currentStatus;
     private Set<OrderStatus> statusHistory;
-    @DBRef
-    @Indexed
     private Retailer retailer;
-    @DBRef
-    @Indexed
     private DeliveryMan deliveryMan;
 //    private Position actualPosition;
 //    private Set<Position> positionHistory;

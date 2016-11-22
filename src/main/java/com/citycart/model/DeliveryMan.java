@@ -1,25 +1,16 @@
 package com.citycart.model;
 
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
-import org.springframework.data.mongodb.core.mapping.Document;
-
 import java.time.LocalDateTime;
 import java.util.Set;
 
 /**
  * Created by otm on 29/10/16.
  */
-@Document(collection = "DELIVERYMEN")
 public class DeliveryMan extends Person {
 
-    @Id
     private String id;
-    @Indexed
     private DeliveryManStatus currentStatus;
     private Set<DeliveryManStatus> statusHistory;
-    @CreatedDate
     private LocalDateTime creationDate;
 
     public DeliveryMan() {
